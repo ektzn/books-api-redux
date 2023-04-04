@@ -1,0 +1,43 @@
+.SearchModule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    padding: 5px;
+    margin: 5px;
+    background: #acacbe;
+}
+
+.SearchInput, .SearchButton {
+    border: black 1px solid ;
+    padding: 10px;
+}
+
+.SearchInput {
+    border-right: none;
+}
+
+.SearchButton {
+    background-image: url(../../icons/Magnifying_glass_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px;
+    border-left: none;
+    width: 30px;
+    background-color: white;
+    color: rgba(0, 0, 0, 0);
+}
+
+.SearchSelectors {
+    display: flex;
+    flex-direction: row;
+}
+
+.SearchSelectorCategory, .SearchSelectorSort {
+    padding: 5px;
+    margin: 5px;
+}
+
+.SearchSelectorCategoryDesc, .SearchSelectorSortDesc {
+    margin-right: 10px;
+}

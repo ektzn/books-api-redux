@@ -1,0 +1,78 @@
+.Modal {
+    position: absolute;
+    inset: 100px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    left: 30%;
+    right: 30%;
+  }
+
+.Overlay {
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.book-card__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    background: #acacbe;
+    height: 400px;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.book-card__img {
+    height: 170px;
+    width: 128px;
+    border-radius: 8px;
+}
+
+.book-card__title, .book-card__category, .book-card__authors {
+    inline-size: 200px;
+    text-align: center;
+    max-width: 200px;
+    max-height: 100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  
+}
+ 
+.book-card__close {
+    width: 100%;
+    border: none;
+    padding: 25px;
+    background: #9797e7;
+    color: white;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 430px) {
+    .Modal {
+        position: absolute;
+        inset: 40px;
+        border: 1px solid rgb(204, 204, 204);
+        background: rgb(255, 255, 255);
+        overflow: auto;
+        border-radius: 4px;
+        outline: none;
+        padding: 20px;
+      }
+  }

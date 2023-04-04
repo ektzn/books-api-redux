@@ -1,0 +1,26 @@
+.BookList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.LoadMore {
+    width: 100%;
+    border: none;
+    padding: 25px;
+    background: #9797e7;
+    color: white;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.TotalItems, p {
+    text-align: center;
+}
+
+@media only screen and (max-width: 430px) {
+    .BookList {
+        justify-content: space-around;
+    }
+  }
