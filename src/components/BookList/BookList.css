@@ -15,7 +15,7 @@
     margin: 5px;
 }
 
-.TotalItems, p {
+.TotalItems, .Loading, .Error {
     text-align: center;
 }
 

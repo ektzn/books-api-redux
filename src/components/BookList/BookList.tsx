@@ -42,15 +42,15 @@ const BookList: React.FC = () => {
     }, [searchObj])
 
     if (loading && startIndex === 0) {
-        return <p>Loading...</p>
+        return <p className="Loading">Loading...</p>
     }
 
     if (error) {
-        return <p>Error: {error}</p>
+        return <p className="Error">Error: {error}</p>
     }
 
     if (books === undefined) {
-        return <p>Error: Books Not Found</p>
+        return <p className="Error">Error: Books Not Found</p>
     }
 
     return (

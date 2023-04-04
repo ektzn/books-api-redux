@@ -18,19 +18,19 @@ const BookPage: React.FC<Props> = (props) => {
                 />
             )}
             <h3 className="book-page__title">{book.volumeInfo.title}</h3>
-            <p className="book-page__category">
+            <div className="book-page__category">
                 {book.volumeInfo.categories && <p>Categories:</p>}
                 {book.volumeInfo.categories &&
                     book.volumeInfo.categories.join(', ')}
-            </p>
-            <p className="book-page__authors">
+            </div>
+            <div className="book-page__authors">
                 {book.volumeInfo.authors && <p>Authors:</p>}
                 {book.volumeInfo.authors && book.volumeInfo.authors.join(', ')}
-            </p>
-            <p className="book-page__desc">
+            </div>
+            <div className="book-page__desc">
                 {book.volumeInfo.description && <p>Description:</p>}
                 {book.volumeInfo.description}
-            </p>
+            </div>
         </div>
     )
 }

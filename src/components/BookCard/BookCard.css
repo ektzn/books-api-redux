@@ -9,6 +9,7 @@
     padding: 20px;
     left: 30%;
     right: 30%;
+    min-height: 200px;
   }
 
 .Overlay {
@@ -21,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .book-card {
@@ -62,6 +64,7 @@
     color: white;
     border-radius: 8px;
     margin: 5px;
+    margin-top: auto;
 }
 
 @media only screen and (max-width: 430px) {
