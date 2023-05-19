@@ -37,7 +37,7 @@ const BookList: React.FC = () => {
 
     useEffect(() => {
         if (searchObj) {
-            searchBooks(startIndex)
+            searchBooks(0)
         }
     }, [searchObj])
 
@@ -66,7 +66,7 @@ const BookList: React.FC = () => {
             {totalItems > startIndex && totalItems > 30 ? (
                 <div>
                     <button className="LoadMore" onClick={handleLoadMore}>
-                        Load more
+                        {!loading && 'Load more'}
                         {loading && startIndex !== 0 && 'Loading more!!!'}
                     </button>
                 </div>

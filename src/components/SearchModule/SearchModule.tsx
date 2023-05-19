@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, ChangeEvent, KeyboardEvent } from 'react'
 import { setError, setSearchObj } from '../../features/books/bookSlice'
 import { useSelector } from 'react-redux'
 import { selectError } from '../../features/books/bookSelect'
@@ -27,6 +27,10 @@ const SearchModule: React.FC = () => {
             dispatch(setError('Enter book name'))
             return
         }
+        if (term.startsWith('-')) {
+            setTerm(term.replace(/^[-]/, ''))
+            console.log(term)
+        }
         dispatch(
             setSearchObj({
                 query: term,
@@ -35,11 +39,11 @@ const SearchModule: React.FC = () => {
             })
         )
     }
-    const handleTermChange = (e: any) => {
+    const handleTermChange = (e: ChangeEvent<HTMLInputElement>) => {
         setTerm(e.target.value)
     }
 
-    const handleKeyDown = (e: any) => {
+    const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             search()
         }

@@ -1,6 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { Book } from '../../types'
 
+type StoreState = {
+    books: Book[]
+    totalItems: number
+    loading: boolean
+    error: null
+    currentBook: Book | null
+    searchObj?: {
+        query: string
+        category: string
+        orderBy: 'relevance' | 'newest'
+    }
+}
+
 const bookSlice = createSlice({
     name: 'books',
     initialState: {
@@ -10,7 +23,7 @@ const bookSlice = createSlice({
         error: null,
         currentBook: null,
         searchObj: undefined,
-    },
+    } as StoreState,
     reducers: {
         setBooks: (state, action) => {
             state.books = action.payload

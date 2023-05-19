@@ -25,7 +25,7 @@ export const selectTotalItems = createSelector(
 
 export const selectBookById = (id: string) =>
     createSelector(selectBooksState, (booksState) =>
-        booksState.books.find((book: any) => book.id === id)
+        booksState.books.find((book) => book.id === id)
     )
 
 export const selectSearchObj = createSelector(
